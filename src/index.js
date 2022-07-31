@@ -1,17 +1,38 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+//var example
+var addition;
+function add(a, b) {
+  var addition = a + b;
+  addition = 7;
+  console.log(addition);
+}
+add(2, 3);
+console.log(addition);
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+//let example
+function sub(a, b) {
+  let subtraction = a - b;
+  subtraction = 10; //over write a-b
+  console.log(subtraction);
+}
+sub(7, 5);
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+// console.log(subtraction); //throws error
+
+// const example
+
+function mul(a, b) {
+  const multiplication = a * b;
+  // multiplication = 10; // gives error
+  console.log(multiplication);
+}
+mul(2, 4);
+
+//map
+const arr = [
+  { a: 1, b: 2 },
+  { c: 3, d: 4 },
+];
+
+arr.map((i) => {
+  console.log(i);
+});
